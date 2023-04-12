@@ -4,11 +4,11 @@
 # что Петя и Сережа сделали одинаковое количество журавликов, 
 # а Катя сделала в два раза больше журавликов, чем Петя и Сережа вместе?
 
-NumСrane = int(input('Введите общее число сделанных журавликов, кратное 6: '))
-PetiaNum = Seregja = NumСrane / 6
-KateNum = (Seregja + PetiaNum)*2
+NumCrane = int(input('Введите общее число сделанных журавликов, кратное 6: '))
 
-if NumСrane % 6 == 0:
-        print(f"Катя сделала: {KateNum}; Петя сделал: {PetiaNum}; Сережа сделал: {Seregja}")
+if NumCrane % 6 == 0:
+    PetiaNum = Seregja = NumCrane / 6
+    KateNum = (Seregja + PetiaNum)*2
+    print(f"Катя сделала: {KateNum}; Петя сделал: {PetiaNum}; Сережа сделал: {Seregja}")
 else:
     print("Введено неверное число")

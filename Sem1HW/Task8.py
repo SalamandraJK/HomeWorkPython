@@ -7,7 +7,7 @@ n = int(input("Введите кол-во долек N: "))
 m = int(input("Введите кол-во долек M: "))
 k = int(input("Введите кол-во долек K: "))
 
-if (k % m == 0 or k % n == 0) and k < (n * m) - n:
+if (k % m == 0 or k % n == 0) and k < n * m - n:
     print('ok')
 else:
     print('Nonono')
