@@ -16,18 +16,23 @@ import random
 
 # print(f"Загаданные числа {first_num} и {second_num}")
 
-first_num = 1
-second_num = 1
+# x = random.randint(1, 100)
+# y = random.randint(1, 100)
+x = int(input("Загадайте сумму: "))
+y = int(input("Загадайте произведение Y: "))
+# sum = x + y
+# multi = x * y
 
-x = random.randint(1, 100)
-y = random.randint(1, 100)
-for first_num in range(x + 1):
-    for second_num in range(y + 1):
-        if (first_num == x + y) and (second_num == x * y):
-            sum = x + y
-            multi = x * y
+for i in range(x):
+    for j in range(y):
+        if x == i + j and y == i * j:      
+            print(f"Загаданные числа {i} и {j}")
+            break
+    else:
+        continue
+    break
+else:
+    print("Решение не найдено")
 
-print(f"Сумма двух чисел = {x + y}")
-print(f"Произведение двух чисел = {x * y}")           
-print(f"Загаданные числа {first_num} и {second_num}")
+
         
