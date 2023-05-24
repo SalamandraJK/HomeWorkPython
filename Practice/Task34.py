@@ -47,7 +47,7 @@ def check_rhyme(string):
     for i in string:
         counts = 0
         for j in i:
-            if j in 'аеёиоуыэюя':
+            if j in 'аеиоуыэюя':
                 counts += 1
         list.append(counts)
     return len(list) == list.count(list[0])
