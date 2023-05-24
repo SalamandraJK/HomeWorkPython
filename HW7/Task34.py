@@ -37,3 +37,21 @@
 
 # # counter = listVinny.count('а, у, о, ы, и, э, я, ю, е')
 # print(point(listVinny))
+
+string_Vinny = str(input("Введите фразу: "))
+string_Vinny = string_Vinny.split()
+
+def check_rhyme(string):
+    list = []
+    for i in string:
+        counts = 0
+        for j in i:
+            if j in 'аеиоуыэюя':
+                counts += 1
+        list.append(counts)
+    if len(list) == list.count(list[0]):
+        return print('Парам пам-пам')
+    else:
+        return print('Пам парам')
+
+print(check_rhyme(string_Vinny))

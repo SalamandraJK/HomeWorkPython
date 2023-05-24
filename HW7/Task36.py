@@ -13,3 +13,16 @@
 #     for j in range(1, column):
 #         print("%4d" % (i * j), end="")
 #     print()
+
+def print_operation_table(operation,
+    num_r = int(input("Кол-во столбцов: ")),
+    num_c = int(input("Кол-во строк: "))):
+    a = [[operation(i, j) 
+        for j in range(1, num_c + 1)] 
+        for i in range(1, num_r + 1)]
+    
+    for i in a:
+        print(*[f"{x: 4d}" for x in i])
+
+
+print_operation_table(lambda x, y: x * y)
