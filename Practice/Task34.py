@@ -10,3 +10,49 @@
 # В ответе напишите “Парам пам-пам”, 
 # если с ритмом все в порядке и “Пам парам”, если с ритмом все не в порядке
 
+# listVinny = str(input("Введите строку через пробел: "))
+
+
+# def point(string):
+#     count = 0
+#     for i in listVinny: 
+#         if i == 'а':
+#             count = count + 1
+#         elif i == 'о':
+#             count = count + 1
+#         elif i == 'ы':
+#             count = count + 1
+#         elif i == 'и':
+#             count = count + 1
+#         elif i == 'э':
+#             count = count + 1
+#         elif i == 'я':
+#             count = count + 1
+#         elif i == 'ю':
+#             count = count + 1
+#         elif i == 'е':
+#             count = count + 1
+#         else:
+#             return count
+
+# # counter = listVinny.count('а, у, о, ы, и, э, я, ю, е')
+# print(point(listVinny))
+
+
+string_Vinny = str(input("Введите фразу: "))
+string_Vinny = string_Vinny.split()
+
+def check_rhyme(string):
+    list = []
+    for i in string:
+        counts = 0
+        for j in i:
+            if j in 'аеёиоуыэюя':
+                counts += 1
+        list.append(counts)
+    return len(list) == list.count(list[0])
+
+if check_rhyme(string_Vinny):
+    print('Парам пам-пам')
+else:
+    print('Пам парам')
